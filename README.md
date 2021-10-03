@@ -17,3 +17,7 @@ Isso vale para o seu cadastro de senhas, quando precisa de senhas com letras min
 Vamos novamente ter essa verificação dos caracteres para checar se eles possuem esse padrão que foi solicitado.
 
 Então esses dois exemplos são excelentes para que você entenda como o Regex funciona (utilizando a biblioteca re) para poder fazer suas análises de dados no Python!
+
+
+
+Thanks God!
