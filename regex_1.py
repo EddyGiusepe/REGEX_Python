@@ -30,11 +30,24 @@ print("# Exemplo 2 #")
 print("#############")
 # ^  - Irá testar o início da string
 # [^]  -Irá considerar todos os caracteres EXCETO o indicado
-texto = 'arara'
+texto = 'arEddyara'
 p = re.compile('^a') # Traz as palavras (ou string) que começam com "a"
-t = re.compile(r'[^a]')
+t = re.compile(r'[^a]') # Traz todos menos os "a"
 q = re.compile(r'^a')
 check_p = p.findall(texto)
 check = t.findall(texto)
 check1= q.findall(texto)
 print(check_p,'\n' ,check,'\n',check1)
+
+
+print("#############")
+print("# Exemplo 3 #")
+print("#############")
+# \d - Qualquer caracter que SEJA um algarismo  de 0 a 9
+# \D - Qualquer caracter que NÃO SEJA um algarismo de 0 a 9
+texto = 'arara1992'
+t = re.compile(r'\d')
+q = re.compile(r'\D')
+check = t.findall(texto)
+check1= q.findall(texto)
+print(check,'\n',check1)
