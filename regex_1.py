@@ -24,6 +24,7 @@ check = t.findall(texto) # findall vai procurar isso em nosso texto
 print("O método me traz uma lista: ")
 print(check)
 
+# NOTA: É importante usar o "r" (row string). Para pegar apenas coisas ligadas ao REGEX e não a outro carater, etc  
 
 print("#############")
 print("# Exemplo 2 #")
@@ -45,7 +46,7 @@ print("# Exemplo 3 #")
 print("#############")
 # \d - Qualquer caracter que SEJA um algarismo  de 0 a 9
 # \D - Qualquer caracter que NÃO SEJA um algarismo de 0 a 9
-texto = 'arara1992'
+texto = 'arara1992-04-1981'
 t = re.compile(r'\d')
 q = re.compile(r'\D')
 check = t.findall(texto)
