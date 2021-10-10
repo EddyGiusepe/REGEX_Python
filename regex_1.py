@@ -10,8 +10,31 @@ print("# CARACTERES NO REGEX #")
 print("#######################")
 # . - Entende qualquer valor exceto uma nova linha
 # \. - Para buscar o caracter "."
-texto = 'arbra'
-t = re.compile('ar.ra') # Procurar::começa com "ar" "tanto faz" termina com "ra"
-check = t.findall(texto) # Este vai nosso padrão de busca
+texto = '''
+arera
+arEDDYra
+arTOPra
+ar\nra
+arMAMÁra
+arDATAra
+'''
+#texto = 'areddyra'
+t = re.compile('ar....ra') # Procurar::começa com "ar" "tanto faz" termina com "ra"
+check = t.findall(texto) # findall vai procurar isso em nosso texto
+print("O método me traz uma lista: ")
 print(check)
 
+
+print("#############")
+print("# Exemplo 2 #")
+print("#############")
+# ^  - Irá testar o início da string
+# [^]  -Irá considerar todos os caracteres EXCETO o indicado
+texto = 'arara'
+p = re.compile('^a') # Traz as palavras (ou string) que começam com "a"
+t = re.compile(r'[^a]')
+q = re.compile(r'^a')
+check_p = p.findall(texto)
+check = t.findall(texto)
+check1= q.findall(texto)
+print(check_p,'\n' ,check,'\n',check1)
